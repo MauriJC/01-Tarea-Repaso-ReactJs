@@ -1,9 +1,18 @@
 import React from 'react'
+import SearchBar from './SearchBar'
+import ItemBar from './ItemBar'
+import data from '../data/Menu.json'
+import MenuBar from './MenuBar'
+
 
 const NavBar = () => {
+
+    //const renderedItems = data.map(item=>{     return ()    });
+
     return (
 
         <nav className="navbar navbar-expand-lg bg-dark" >
+            
             <div className="container-fluid">
                 <button
                     className="navbar-toggler"
@@ -16,35 +25,10 @@ const NavBar = () => {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
+
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item ">
-                            <a className="nav-link active text-white" aria-current="page" href="#">
-                                Link-1
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link active text-white" aria-current="page" href="#">
-                                Link-2
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link active text-white" aria-current="page" href="#">
-                                Link-3
-                            </a>
-                        </li>
-                    </ul>
-                    <form className="d-flex" role="search">
-                        <input
-                            className="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button className="btn btn-dark" type="submit">
-                            Search
-                        </button>
-                    </form>
+                   <MenuBar data = {data}></MenuBar>
+                   <SearchBar></SearchBar>
                 </div>
             </div>
         </nav>

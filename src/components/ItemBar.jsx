@@ -1,10 +1,17 @@
 import React from 'react'
 
-const ItemBar = () => {
+const ItemBar = ({key,name,link,active}) => {
   return (
-    <div>
-      
-    </div>
+
+    <li className="nav-item " key={key}>
+      <a className={`nav-link active text-white ${active?'':'disabled'}`}
+      aria-current="page" 
+      href={link} 
+      >
+        {name}
+      </a>
+    </li>
+
   )
 }
 
