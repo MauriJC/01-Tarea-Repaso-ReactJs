@@ -4,11 +4,13 @@ import novedades from '../data/Novedades.json'
 
 const News = () => {
 
-    console.log(novedades);
+   
     const renderedNews = novedades.map(novedad => {
+        
         return (
             <NewsItem
                 key={novedad.id}
+                identifier={novedad.id}
                 title={novedad.title}
                 description={novedad.description}>
             </NewsItem>
